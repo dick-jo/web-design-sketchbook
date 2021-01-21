@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="toolkit.css">
+
+    <style>
+        * {
+            font-family: monospace;
+        }
+        
+        .grid-container {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, var(--spsc-8)) repeat(10, 1fr);
+            grid-template-rows: 72px calc(100% - 72px);
+        }
+        
+        .button-nav {
+            margin: var(--spsc-1);
+        }
+        
+        .profile-pic-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(var(--spsc-8) * 2);
+        }
+        
+        .profile-pic {
+            height: 64%;
+            width: 64%;
+            border-radius: 50%;
+        }
+        
+        .profile-bio {
+            padding: var(--spsc-4);
+        }
+        
+        .profile-bio li {
+            margin-left: var(--spsc-4);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="grid-container">
+        <nav class="cols-12 grid-container ln">
+            <div class="button-nav cols-2 ln">LOGO</div>
+            <div class="button-nav cols-2 ln">ABOUT</div>
+            <div class="button-nav cols-2 ln">CASE STUDIES</div>
+            <div class="cols-4"></div>
+            <div class="button-nav cols-2 ln">CONTACT</div>
+        </nav>
+
+        <div class="panel-left cols-2 ln nl-top">
+            <div class="profile-pic-container ln-bottom">
+                <div class="profile-pic ln">PIC</div>
+            </div>
+            <div class="profile-bio">
+                <ul>
+                    <h5>Dick Jones</h5>
+                    <li><strong>Age:</strong> 21</li>
+                    <li><strong>Music:</strong>Tropical Jazz</li>
+                    <li><strong>Food:</strong>Tiramisu</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="content cols-10">
+            <h1>The truth about grids...</h1>
+            <h5>Everything you ever wanted to know about grids</h5>
+            <h6>Jan 21, 21. Author: Dick Jones</h6>
+
+            <p>Say you have a very simple CSS grid layout with one column fixed at 300px and another taking up the rest of the space at 1fr. That’s somewhat robust. That 1fr column will take up any remaining space left behind by the fixed 300px column. It’s
+                true that the auto value would do the same, but auto isn’t quite as robust since it’s size is based on the content inside. So, if you had too little content, then your column might not fill the entire space you want it to. But while 1fr
+                is slightly more robust, it won’t quite protect you from content that is too big! Here’s the grid behaving just fine with some text content:</p>
+        </section>
+
+    </main>
+
+</body>
