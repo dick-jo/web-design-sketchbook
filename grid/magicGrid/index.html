@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <!--  -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: 360ms;
+        }
+        
+        html {
+            font-size: 16px;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%
+        }
+        
+        body {
+            font-family: monospace;
+            padding: 2rem;
+        }
+        
+        .grid-container-auto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+            grid-gap: 1rem;
+        }
+        
+        .card {
+            border: 0.12rem solid #bdbdbd;
+            border-radius: 1rem;
+            min-height: 8rem;
+        }
+        
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+        
+        .cols-2 {
+            grid-column: span 2;
+        }
+        
+        .cols-3 {
+            grid-column: span 3;
+        }
+        
+        .cols-4 {
+            grid-column: span 4;
+        }
+    </style>
+    <!--  -->
+</head>
+
+<body>
+
+    <header>
+        <h1>Magic grid.</h1>
+    </header>
+
+    <main class="grid-container-auto">
+        <div class="card cols-2">ONE</div>
+        <div class="card">TWO</div>
+        <div class="card cols-3">ONE</div>
+        <div class="card">TWO</div>
+        <div class="card">ONE</div>
+        <div class="card">TWO</div>
+        <div class="card cols-4">ONE</div>
+        <div class="card">TWO</div>
+        <div class="card">ONE</div>
+        <div class="card">TWO</div>
+    </main>
+
+</body>
+
+</html>
