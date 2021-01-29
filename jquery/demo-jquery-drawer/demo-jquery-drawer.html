@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<head>
+
+    <style>
+        * {
+            font-family: monospace;
+            font-size: 1.72rem;
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            margin: none;
+            padding: none;
+            list-style-type: none;
+        }
+        
+        .container {
+            width: 320px;
+            border: 1px solid #e6e6e6;
+        }
+        
+        .toggle {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #424242;
+            padding: 8px 24px;
+            cursor: pointer;
+        }
+        
+        img {
+            filter: invert(100%);
+        }
+        
+        li {
+            border-top: 1px solid #e6e6e6;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="toggle">
+            More<img src="chevron.png" />
+        </div>
+        <ul id="dropDown">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+
+
+    <script>
+        $(".toggle").on("click", function() {
+            $("#dropDown").slideToggle();
+        });
+    </script>
+
+</body>
+
+</html>
