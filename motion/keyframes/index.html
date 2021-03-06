@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="marlin.css" type="text/css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+        }
+        
+        body {
+            padding: 6rem;
+        }
+        
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 720px;
+            border-radius: 1rem;
+            transition: 240ms;
+        }
+        
+        .card:hover {
+            box-shadow: var(--ev-12);
+        }
+        
+        .shape {
+            border-radius: 50%;
+            height: 256px;
+            width: 256px;
+            background-color: var(--accent);
+            /* animation */
+            animation: pulse 600ms ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2)
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .sway {
+            animation: sway 600ms ease-in-out infinite;
+        }
+        
+        @keyframes sway {
+            0% {
+                transform: translateX(0%)
+            }
+            25% {
+                transform: translateX(12%)
+            }
+            75% {
+                transform: translateX(-12%)
+            }
+            100% {
+                transform: translateX(0%)
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card ev-2">
+        <div class="shape sway"></div>
+    </div>
+
+</body>
+
+</html>

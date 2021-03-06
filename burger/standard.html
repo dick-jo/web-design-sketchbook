@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        .ln {
+            border: 1px solid #bdbdbd;
+        }
+        
+        .brand {
+            padding-left: 2rem;
+        }
+        
+        .container {
+            height: 96px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .container>* {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        
+        .links {
+            justify-content: flex-end;
+        }
+        
+        .links>* {
+            padding-right: 4rem;
+        }
+        
+        .mobile-menu {
+            background: #1b1b1b;
+            color: white;
+            text-align: center;
+        }
+        
+        .mobile-menu * {
+            padding: .5rem 0rem;
+        }
+        
+        .burger {
+            max-width: 120px;
+            display: none;
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        .toggle {
+            display: block;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .burger {
+                display: inherit;
+            }
+            .links {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="container ln">
+            <div class="brand">LOGO</div>
+            <ul class="links">
+                <li>About</li>
+                <li>Contact</li>
+                <li>Work</li>
+            </ul>
+            <div class="burger"><a href="#"><strong>MENU</strong></a></div>
+        </div>
+
+        <div id="toggle-menu" class="mobile-menu">
+            <ul>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Work</li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        $(".burger").on("click", function() {
+            $("#toggle-menu").slideToggle();
+        })
+    </script>
+
+</body>
+
+
+
+</html>
